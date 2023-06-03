@@ -1,0 +1,19 @@
+name: 'HCL OneTest Server GitHub Action'
+on: workflow_dispatch
+
+jobs:
+  OTS-ACTION:
+    runs-on: self-hosted
+    name: Execute OTS Test
+    steps:
+      - name: Execute Test
+        uses: joeilan/.github-workflows@main
+        with:
+          serverUrl: https://hcl-onetest.sbx0064.play.hclsofy.dev/
+          offlineToken: eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJkN2JjZDI4Zi01OTNiLTQ1ZWUtOGQ3Yy1iMjBkOTY2NTJkOGIifQ.eyJpYXQiOjE2ODU0NTI1MTUsImp0aSI6IjhjYTY3NTM4LTczZWItNDZiZS05MDQxLTM4ZWQxYjQ3MzgxNCIsImlzcyI6Imh0dHBzOi8vaGNsLW9uZXRlc3Quc2J4MDA2NC5wbGF5LmhjbHNvZnkuZGV2L2F1dGgvcmVhbG1zL3Rlc3RzZXJ2ZXIiLCJhdWQiOiJodHRwczovL2hjbC1vbmV0ZXN0LnNieDAwNjQucGxheS5oY2xzb2Z5LmRldi9hdXRoL3JlYWxtcy90ZXN0c2VydmVyIiwic3ViIjoiZjY0ODQzMTgtNTBhMS00NTQ3LWE0NzMtNDgyOGRmMDkxMGQ3IiwidHlwIjoiT2ZmbGluZSIsImF6cCI6InRlc3RzZXJ2ZXIiLCJzZXNzaW9uX3N0YXRlIjoiZTkyMmUwYzEtNjEzYi00ZWQwLTllZTEtZjhlN2IxNDNlNjkzIiwic2NvcGUiOiJ0ZXN0c2VydmVyIGVtYWlsIG9mZmxpbmVfYWNjZXNzIHByb2ZpbGUiLCJzaWQiOiJlOTIyZTBjMS02MTNiLTRlZDAtOWVlMS1mOGU3YjE0M2U2OTMifQ.JnhuxeuguiGT8GJ8IcSJAms25LaULh_oyKdr1oFtvSU
+          teamspace: Initial Team Space
+          project: Emerald_UI
+          branch: main
+          repository: https://github.com/joeilan/TOTEM.git
+          filepath: Emerald-UI-Tests/Emerald/Login Add Item & Checkout.testsuite
+          
